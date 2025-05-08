@@ -115,24 +115,24 @@ const PasswordGenerator = () => {
   };
 
   return (
-    <div className="w-full max-w-md p-6 bg-blue-950/90 rounded-lg shadow-xl backdrop-blur-sm">
+    <div className="w-full max-w-md p-6 bg-red-950/90 rounded-lg shadow-xl backdrop-blur-sm">
       {/* Título e ícone */}
       <div className="flex justify-center items-center mb-4">
-        <LockIcon className="w-8 h-8 text-blue-400 mr-2" />
+        <LockIcon className="w-8 h-8 text-red-400 mr-2" />
         <h1 className="text-2xl font-bold text-white">Gerador de senhas</h1>
       </div>
       
-      <p className="text-center text-blue-300 mb-6">Gere instantaneamente uma senha aleatória e segura</p>
+      <p className="text-center text-red-300 mb-6">Gere instantaneamente uma senha aleatória e segura</p>
       
       {/* Exibição da senha */}
       <div className="relative mb-6">
-        <div className="flex items-center justify-between bg-blue-900 p-4 rounded-lg">
+        <div className="flex items-center justify-between bg-red-900 p-4 rounded-lg">
           <div className="font-mono text-xl text-white overflow-x-auto whitespace-nowrap max-w-[calc(100%-40px)]">
             {password}
           </div>
           <button 
             onClick={copyToClipboard} 
-            className="text-blue-300 hover:text-white transition-colors"
+            className="text-red-300 hover:text-white transition-colors"
             aria-label="Copiar senha"
           >
             <CopyIcon className="w-5 h-5" />
@@ -141,25 +141,25 @@ const PasswordGenerator = () => {
       </div>
 
       {/* Personalização */}
-      <div className="bg-blue-900/50 p-4 rounded-lg mb-6">
+      <div className="bg-red-900/50 p-4 rounded-lg mb-6">
         <h2 className="text-xl text-white mb-4">Personalize sua senha</h2>
         
         {/* Comprimento da senha */}
         <div className="mb-4">
-          <label className="text-sm text-blue-300 block mb-2">Número de caracteres</label>
+          <label className="text-sm text-red-300 block mb-2">Número de caracteres</label>
           <div className="flex items-center">
             <button 
               onClick={decreaseLength} 
-              className="bg-blue-800 text-white w-8 h-8 flex items-center justify-center rounded-l-md hover:bg-blue-700"
+              className="bg-red-800 text-white w-8 h-8 flex items-center justify-center rounded-l-md hover:bg-red-700"
             >
               -
             </button>
-            <span className="bg-blue-800 text-white px-4 py-1 text-center min-w-[50px]">
+            <span className="bg-red-800 text-white px-4 py-1 text-center min-w-[50px]">
               {length}
             </span>
             <button 
               onClick={increaseLength} 
-              className="bg-blue-800 text-white w-8 h-8 flex items-center justify-center rounded-r-md hover:bg-blue-700"
+              className="bg-red-800 text-white w-8 h-8 flex items-center justify-center rounded-r-md hover:bg-red-700"
             >
               +
             </button>
@@ -168,7 +168,7 @@ const PasswordGenerator = () => {
         
         {/* Características da senha */}
         <div className="mb-4">
-          <label className="text-sm text-blue-300 block mb-2">Características da senha</label>
+          <label className="text-sm text-red-300 block mb-2">Características da senha</label>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div className="flex items-center">
               <input 
@@ -176,7 +176,7 @@ const PasswordGenerator = () => {
                 id="uppercase" 
                 checked={upperCase} 
                 onChange={() => setUpperCase(!upperCase)} 
-                className="w-4 h-4 mr-2 accent-blue-500"
+                className="w-4 h-4 mr-2 accent-red-500"
               />
               <label htmlFor="uppercase" className="text-white">Letras maiúsculas</label>
             </div>
@@ -186,7 +186,7 @@ const PasswordGenerator = () => {
                 id="lowercase" 
                 checked={lowerCase} 
                 onChange={() => setLowerCase(!lowerCase)} 
-                className="w-4 h-4 mr-2 accent-blue-500"
+                className="w-4 h-4 mr-2 accent-red-500"
               />
               <label htmlFor="lowercase" className="text-white">Letras minúsculas</label>
             </div>
@@ -196,7 +196,7 @@ const PasswordGenerator = () => {
                 id="numbers" 
                 checked={numbers} 
                 onChange={() => setNumbers(!numbers)} 
-                className="w-4 h-4 mr-2 accent-blue-500"
+                className="w-4 h-4 mr-2 accent-red-500"
               />
               <label htmlFor="numbers" className="text-white">Números</label>
             </div>
@@ -206,7 +206,7 @@ const PasswordGenerator = () => {
                 id="symbols" 
                 checked={symbols} 
                 onChange={() => setSymbols(!symbols)} 
-                className="w-4 h-4 mr-2 accent-blue-500"
+                className="w-4 h-4 mr-2 accent-red-500"
               />
               <label htmlFor="symbols" className="text-white">Símbolos</label>
             </div>
@@ -215,7 +215,7 @@ const PasswordGenerator = () => {
         
         {/* Força da senha */}
         <div>
-          <label className="text-sm text-blue-300 block mb-2">Força da senha</label>
+          <label className="text-sm text-red-300 block mb-2">Força da senha</label>
           <div className="flex items-center">
             <div className={`w-full h-2 rounded-full ${getStrengthClass()}`}></div>
             <div className="ml-4 min-w-[60px] text-center">
@@ -228,7 +228,7 @@ const PasswordGenerator = () => {
       {/* Botão de gerar nova senha */}
       <button 
         onClick={generatePassword}
-        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-bold transition-colors shadow-lg"
+        className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-lg font-bold transition-colors shadow-lg"
       >
         Gerar nova senha
       </button>

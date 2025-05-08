@@ -1,10 +1,10 @@
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PasswordGenerator from "../components/PasswordGenerator";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-900 to-black">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-red-950 to-black">
       <PasswordGenerator />
     </div>
   );
